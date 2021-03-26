@@ -1,6 +1,6 @@
 ---
 title: "Nathan Nguyen"
-image: "hi.jpg"
+image: "RockMan.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/nathan-nguyen-891b01187/"
