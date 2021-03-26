@@ -1,13 +1,12 @@
 ---
 title: "Nathan Nguyen"
-
 image: "hi.jpg"
 links:
-  -label: LinkedIn
+  - label: LinkedIn
     url: "https://www.linkedin.com/in/nathan-nguyen-891b01187/"
-  -label: GitHub
+  - label: GitHub
     url: "https://github.com/toasted-marshmallow"
-  -label: Email
+  - label: Email
     url: "mailto:nathannguyen801@gmail.com"
 output:
   postcards::jolla
