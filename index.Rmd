@@ -1,9 +1,9 @@
 ---
 title: "Nathan Nguyen"
 image: "RockMan.jpg"
-color1: "#5A59A3"
-color2: "#FFC100"
-angle: 145
+# color1: "#5A59A3"
+# color2: "#FFC100"
+# angle: 145
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/nathan-nguyen-891b01187/"
@@ -13,7 +13,7 @@ links:
     url: "mailto:nathannguyen801@gmail.com"
   # - label: Projects
 output:
-  postcards::onofre
+  postcards::jolla
 site: distill::distill_website
 ---
 

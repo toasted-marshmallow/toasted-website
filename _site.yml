@@ -3,12 +3,12 @@ title: "Nathan Nguyen"
 description: |
   Nathan Nguyen
 output_dir: "docs"
-# navbar:
-  # right:
-   # - text: "Home"
-     # href: index.html
-   # - text: "About"
-     # href: about.html
-   # - text: "Resume"
-     # href: Incomplete_Resume.pdf
+navbar:
+  right:
+   - text: "Home"
+     href: index.html
+   - text: "About"
+     href: about.html
+   - text: "Resume"
+     href: Incomplete_Resume.pdf
 output: distill::distill_article
