@@ -1,7 +1,7 @@
 ---
-title: "**Surprised Pikachu**"
+title: "**Surprised Pikachu** WEBSITE STILL IN PROGESS!!!"
 description: |
-  Hamsters are pretty cute -- the dwarf phones though. 
+  Hamsters are pretty cute -- the dwarf ones though. 
 ---
 
 ```{r setup, include=FALSE}

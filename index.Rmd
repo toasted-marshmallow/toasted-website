@@ -25,4 +25,4 @@ knitr::opts_chunk$set(echo = FALSE)
 # Learn more about publishing to GitHub Pages at:
 # https://rstudio.github.io/distill/publish_website.html#github-pages
 ```
-Moderately surprised that this is working. It was a guideline, but I'm horrible with this kind of stuff. 
+Moderately surprised that this is working. This website is still in progress!!! 
