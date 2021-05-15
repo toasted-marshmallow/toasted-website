@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/Demo/",
+    "title": "A Demo for the Github Distill page",
+    "description": "In this demo I will be making some plots using the Iris data set -- a boxplot and a scatter plot",
+    "author": [
+      {
+        "name": "Nathan Nguyen",
+        "url": {}
+      }
+    ],
+    "date": "2021-05-15",
+    "categories": [],
+    "contents": "\r\nOverview\r\nThis report will be a demo for the website that I am working on. This will just demonstrate my basic capabilities with the ggplot2 library by constructing a boxplot and a scatterplot with multiple linear models.\r\nexploring ggplot\r\nmaking the code folds work\r\nattempting to get this to run on the Github website\r\n\r\n\r\nhide\r\n\r\ngetdata <- function(...){\r\n  e = new.env()\r\n  name = data(..., envir = e)[1]\r\n  e[[name]]\r\n}\r\n\r\ndata <- getdata(\"iris\")\r\n\r\n\r\n\r\nThe boxplot\r\nSepal Length Boxplot by Species\r\ncolor indicates which species\r\n\r\n\r\nhide\r\n\r\ndata %>%\r\n  ggplot(aes(x = Species, y = Sepal.Length, fill = Species)) +\r\n  geom_boxplot(aes(group = Species)) +\r\n  labs(x = \"Species\",\r\n       y = \"Sepal Length\",\r\n       title = \"Sepal Length Box Plot by Species\") +\r\n  theme(plot.title = element_text(hjust = 0.5),\r\n        legend.position = \"none\") +\r\n  scale_fill_d3()\r\n\r\n\r\n\r\n\r\nThe scatterplot and linear models by species\r\ncolor indicates species\r\n\r\n\r\nhide\r\n\r\ndata %>%\r\n  ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +\r\n  geom_point(aes(group = Species)) + geom_smooth(method = \"lm\", se = FALSE) +\r\n  labs(x = \"Sepal Length\",\r\n       y = \"Sepal Width\",\r\n       title = \"Sepal Width Function of Sepal Length\") +\r\n  scale_color_d3() +\r\n  theme(plot.title = element_text(hjust = 0.5),\r\n        legend.position = \"top\")\r\n\r\n\r\n\r\n\r\nStargazer Table\r\n\r\n\r\nhide\r\n\r\nstargazer(lm1, type = \"html\",\r\n          covariate.labels = c(\"Versicolor\", \"Virginica\", \"Sepal Width\"),\r\n          dep.var.labels = \"Sepal Length\")\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDependent variable:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSepal Length\r\n\r\n\r\n\r\n\r\nVersicolor\r\n\r\n\r\n1.459***\r\n\r\n\r\n\r\n(0.112)\r\n\r\n\r\n\r\n\r\n\r\n\r\nVirginica\r\n\r\n\r\n1.947***\r\n\r\n\r\n\r\n(0.100)\r\n\r\n\r\n\r\n\r\n\r\n\r\nSepal Width\r\n\r\n\r\n0.804***\r\n\r\n\r\n\r\n(0.106)\r\n\r\n\r\n\r\n\r\n\r\n\r\nConstant\r\n\r\n\r\n2.251***\r\n\r\n\r\n\r\n(0.370)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nObservations\r\n\r\n\r\n150\r\n\r\n\r\nR2\r\n\r\n0.726\r\n\r\n\r\nAdjusted R2\r\n\r\n0.720\r\n\r\n\r\nResidual Std. Error\r\n\r\n\r\n0.438 (df = 146)\r\n\r\n\r\nF Statistic\r\n\r\n\r\n128.888*** (df = 3; 146)\r\n\r\n\r\n\r\n\r\nNote:\r\n\r\n\r\np<0.1; p<0.05; p<0.01\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/Demo/Demo_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2021-05-15T02:26:47-07:00",
+    "input_file": {}
+  }
+]

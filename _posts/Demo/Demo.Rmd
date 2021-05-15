@@ -1,0 +1,90 @@
+---
+title: "A Demo for the Github Distill page"
+description: |
+  In this demo I will be making some plots using the Iris data set -- a boxplot and a scatter plot
+author:
+  - name: Nathan Nguyen
+    url: {}
+date: 05-15-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: 'hide'
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+#Attach packages
+library(tidyverse)
+library(here)
+library(stargazer)
+library(naniar)
+library(broom)
+library(ggsci)
+```
+
+
+# Overview
+
+This report will be a demo for the website that I am working on. This will just demonstrate my basic capabilities with the ggplot2 library by constructing a boxplot and a scatterplot with multiple linear models.
+
+- exploring ggplot
+- making the code folds work
+- attempting to get this to run on the Github website
+
+```{r}
+getdata <- function(...){
+  e = new.env()
+  name = data(..., envir = e)[1]
+  e[[name]]
+}
+
+data <- getdata("iris")
+```
+
+# The boxplot
+
+### Sepal Length Boxplot by Species
+
+- color indicates which species
+
+```{r, message = FALSE, warning = FALSE}
+data %>%
+  ggplot(aes(x = Species, y = Sepal.Length, fill = Species)) +
+  geom_boxplot(aes(group = Species)) +
+  labs(x = "Species",
+       y = "Sepal Length",
+       title = "Sepal Length Box Plot by Species") +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.position = "none") +
+  scale_fill_d3()
+```
+
+### The scatterplot and linear models by species
+
+- color indicates species
+
+```{r, message = FALSE, warning = FALSE}
+data %>%
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point(aes(group = Species)) + geom_smooth(method = "lm", se = FALSE) +
+  labs(x = "Sepal Length",
+       y = "Sepal Width",
+       title = "Sepal Width Function of Sepal Length") +
+  scale_color_d3() +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.position = "top")
+```
+
+```{r, include = FALSE}
+lm1 <- lm(Sepal.Length ~ Species + Sepal.Width, data = data)
+```
+
+
+# Stargazer Table
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE, results = 'asis'}
+stargazer(lm1, type = "html",
+          covariate.labels = c("Versicolor", "Virginica", "Sepal Width"),
+          dep.var.labels = "Sepal Length")
+
+```
