@@ -1,5 +1,7 @@
 ---
 title: "Website Still In Progress!"
+navbar:
+  search: false # removes search bar!
 description: |
   I'm not entirely sure what I'll do with this website. Perhaps I'll rename this section from "About" to "Projects," and then I will add some small projects that'll include R code, graphics, and some commentary. Nothing too fancy and nothing not not fancy... amazing English. 
   
