@@ -4,6 +4,7 @@ description: |
   Nathan Nguyen
 output_dir: "docs"
 navbar:
+  search: false # removes search bar!
   right:
    - text: "Home"
      href: index.html
@@ -13,5 +14,4 @@ navbar:
      href: ResumeRedacted.pdf
    - text: "Projects"
      href: blah.html
-     search: false
 output: distill::distill_article
