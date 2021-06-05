@@ -11,7 +11,7 @@ navbar:
    - text: "About"
      href: about.html
    - text: "Resume"
-     href: ResumeRedacted.pdf
+     href: Resume_Alt.pdf
    - text: "Projects"
      href: blah.html
 output: distill::distill_article
