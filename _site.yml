@@ -2,6 +2,7 @@ name: "."
 title: "Nathan Nguyen"
 description: |
   Nathan Nguyen
+google_analytics: "G-7DJW8YMBBB"
 output_dir: "docs"
 navbar:
   search: false # removes search bar!

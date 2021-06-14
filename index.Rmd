@@ -1,6 +1,6 @@
 ---
 title: "Nathan Nguyen"
-image: "RockMan.jpg"
+image: "actually_smiling.jpg"
 # color1: "#5A59A3"
 # color2: "#FFC100"
 # angle: 145
