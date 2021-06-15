@@ -9,6 +9,8 @@ links:
     url: "https://www.linkedin.com/in/nathan-nguyen-891b01187/"
   - label: GitHub
     url: "https://github.com/toasted-marshmallow"
+  - label: Tableau Public
+    url: "https://public.tableau.com/profile/nathan.nguyen4469#!/"
   - label: Email
     url: "mailto:nathannguyen801@gmail.com"
   # - label: Projects
@@ -25,4 +27,4 @@ knitr::opts_chunk$set(echo = FALSE)
 # Learn more about publishing to GitHub Pages at:
 # https://rstudio.github.io/distill/publish_website.html#github-pages
 ```
-I just graduated with a bachelor's of science in mathematics, and I have experience with statistical modeling with my main tool being R. I'm currently a volunteer research assistant at Valleywise Health Medical center where I help with internal research projects e.g., reports, models, and hypothesis testing.
+Recently graduated with a bachelor's of science in mathematics, and I have experience with statistical modeling. I'm currently a volunteer research assistant at Valleywise Health Medical center where I help with internal research projects e.g., reports, models, and hypothesis testing.
