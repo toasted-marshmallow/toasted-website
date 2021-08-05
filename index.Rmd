@@ -15,7 +15,7 @@ links:
     url: "mailto:nathannguyen801@gmail.com"
   # - label: Projects
 output:
-  postcards::jolla
+  postcards::trestles
 site: distill::distill_website
 ---
 
